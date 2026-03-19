@@ -197,7 +197,7 @@ jQuery(document).ready(function () {
     }
   });
 
-  
+
   // ===== Follow Following js ===== //
   jQuery(document).ready(function () {
     var swiper = new Swiper(".categories .swiper", {
@@ -207,6 +207,17 @@ jQuery(document).ready(function () {
         nextEl: ".swiper-button-next-categories",
         prevEl: ".swiper-button-prev-categories",
       },
+      breakpoints: {
+        768: {
+          navigation: {
+            nextEl: ".swiper-button-next-categories",
+            prevEl: ".swiper-button-prev-categories",
+          },
+        },
+        0: {
+          navigation: false,
+        }
+      }
     });
   });
 

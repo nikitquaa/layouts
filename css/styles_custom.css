@@ -2002,21 +2002,29 @@ ul.social-app li a:hover svg path {
 }
 
 .categories__list {
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .categories__list {
+    padding: 2.5rem 0;
+  }
 }
 
 .categories__list__item {
   width: fit-content;
 }
 
-.categories__list__item a {
-  font-size: 1rem;
-  padding: 8px 22px;
+@media (min-width: 768px) {
+  .categories__list__item a {
+    font-size: 1rem;
+    padding: 8px 22px;
+  }
 }
 
 .categories__list__item--special a {
-  border-color: #ff9000;
-  box-shadow: 1px 1px 2px 0 #ff9000;
+  border-color: #f70007;
+  box-shadow: 1px 1px 2px 0 #f70007;
 }
 
 .swiper-button-prev-categories,
