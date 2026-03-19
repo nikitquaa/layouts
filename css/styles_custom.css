@@ -691,6 +691,14 @@ body {
   color: rgb(25 25 25 / var(--tw-text-opacity));
 }
 
+.see-more-btn {
+  font-size: 0.875rem;
+  color: #008000;
+  font-weight: 300;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
 /* ====== buttons ====== */
 
 .plus-btn:hover svg path {
@@ -1401,6 +1409,16 @@ ul.social-app li a:hover svg path {
   background-color: #ffffff;
   border-inline-end: 1px solid #E6E6E6;
   z-index: 10;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.sidebar__wrap:hover {
+    scrollbar-color: #e5e7eb transparent;
 }
 
 @media (min-width: 480px) {
@@ -1515,6 +1533,14 @@ ul.social-app li a:hover svg path {
 .sub-menu ul li a:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(242 242 242 / var(--tw-bg-opacity));
+}
+
+#sidebarRubrics .nav-menu .nav-item:nth-child(n+8) {
+  display: none;  
+} 
+ 
+#sidebarRubrics .nav-menu.show-all .nav-item:nth-child(n+8) {
+  display: list-item;
 }
 
 .sidebar__bottom {

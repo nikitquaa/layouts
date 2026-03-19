@@ -18,6 +18,16 @@ jQuery(document).ready(function () {
     jQuery('.nav-item').not(this).find('.sub-menu').slideUp();
   });
 
+  // ===== Sidebar Rubrics Js ===== //
+
+  jQuery('#sidebarRubricsBtn').click(function () {
+    // Toggle show-all class from rubrics list
+    jQuery('#sidebarRubrics .nav-menu').toggleClass('show-all');
+
+    // Toggle text from button
+    jQuery(this).text(jQuery('#sidebarRubrics .nav-menu').hasClass('show-all') ? 'Скрыть' : 'Показать все...');
+  });
+
   // ===== Topic Tabs Js ===== //
 
   // jQuery(".topic-tabs").on("click", ".topic-tabs-link ", function (e) {
@@ -150,9 +160,9 @@ jQuery(document).ready(function () {
   // ===== Social Share Siide js ===== // 
 
   jQuery(".post #toggleSocial1").on("click", function () {
-    jQuery( this ).parents('.post').find( '#SocialOption' ).slideToggle();
+    jQuery(this).parents('.post').find('#SocialOption').slideToggle();
   });
-  
+
   // ===== Reply js ===== // 
 
   jQuery(".comment-item .reply-now").on("click", function () {
@@ -163,21 +173,21 @@ jQuery(document).ready(function () {
 
     // Check if the class is active
     if (commentItem.hasClass("active")) {
-        // Add the HTML first, but hide it initially
-        commentItem.append('<form class="reply-forms bg-gray-500 p-4 rounded flex flex 2sm:flex-nowrap flex-wrap items-start mb-6"><a href="javascript:;" class="2sm:flex hidden 2sm:max-w-[30px] w-full 2sm:h-[30px] max-w-[28px] h-[28px] rounded-full overflow-hidden me-3"><img height="30" width="30" src="image/user-1.png" alt="/" class="w-full h-full"></a><textarea class="w-full h-[95px] font-matter px-3 py-2 rounded text-base text-gray-900 placeholder:font-matter placeholder:text-base placeholder:text-gray-800 focus-visible:outline-none border border-gray-400 focus:border-gray-400" type="text" name="text" placeholder="Add a comment…"></textarea><div class="flex justify-between items-center 2sm:w-fit w-full 2sm:mt-0 mt-3"><a href="javascript:;" class="2sm:hidden flex 2sm:max-w-[30px] w-full 2sm:h-[30px] max-w-[28px] h-[28px] rounded-full overflow-hidden me-3"><img height="30" width="30" src="image/user-3.png" alt="/" class="w-full h-full"></a><a href="javascript:;" class="btn-primary flex ms-3">Send</a></div></form>');
-        // Then slide it down to show
-        commentItem.find(".reply-forms").hide().slideDown();
+      // Add the HTML first, but hide it initially
+      commentItem.append('<form class="reply-forms bg-gray-500 p-4 rounded flex flex 2sm:flex-nowrap flex-wrap items-start mb-6"><a href="javascript:;" class="2sm:flex hidden 2sm:max-w-[30px] w-full 2sm:h-[30px] max-w-[28px] h-[28px] rounded-full overflow-hidden me-3"><img height="30" width="30" src="image/user-1.png" alt="/" class="w-full h-full"></a><textarea class="w-full h-[95px] font-matter px-3 py-2 rounded text-base text-gray-900 placeholder:font-matter placeholder:text-base placeholder:text-gray-800 focus-visible:outline-none border border-gray-400 focus:border-gray-400" type="text" name="text" placeholder="Add a comment…"></textarea><div class="flex justify-between items-center 2sm:w-fit w-full 2sm:mt-0 mt-3"><a href="javascript:;" class="2sm:hidden flex 2sm:max-w-[30px] w-full 2sm:h-[30px] max-w-[28px] h-[28px] rounded-full overflow-hidden me-3"><img height="30" width="30" src="image/user-3.png" alt="/" class="w-full h-full"></a><a href="javascript:;" class="btn-primary flex ms-3">Send</a></div></form>');
+      // Then slide it down to show
+      commentItem.find(".reply-forms").hide().slideDown();
     } else {
-        // Slide up the reply-box and remove it after the animation completes
-        commentItem.find(".reply-forms").slideUp(function() {
-            jQuery(this).remove();
-        });
+      // Slide up the reply-box and remove it after the animation completes
+      commentItem.find(".reply-forms").slideUp(function () {
+        jQuery(this).remove();
+      });
     }
   });
 
   // ===== Follow Following js ===== //
 
-  jQuery('.post .btn-small').click(function() {
+  jQuery('.post .btn-small').click(function () {
     jQuery(this).toggleClass('following');
 
     if (jQuery(this).hasClass('following')) {
