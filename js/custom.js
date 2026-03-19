@@ -197,7 +197,18 @@ jQuery(document).ready(function () {
     }
   });
 
-
+  
+  // ===== Follow Following js ===== //
+  jQuery(document).ready(function () {
+    var swiper = new Swiper(".categories .swiper", {
+      slidesPerView: 'auto',
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next-categories",
+        prevEl: ".swiper-button-prev-categories",
+      },
+    });
+  });
 
 
 

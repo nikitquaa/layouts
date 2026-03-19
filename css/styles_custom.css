@@ -1137,11 +1137,11 @@ ul.social-app li a:hover svg path {
   }
 }
 
-.header__logo svg > g  {
+.header__logo svg>g {
   transition: .3s;
 }
 
-.header__logo:hover svg > g {
+.header__logo:hover svg>g {
   fill: #191919;
 }
 
@@ -1418,7 +1418,7 @@ ul.social-app li a:hover svg path {
 }
 
 .sidebar__wrap:hover {
-    scrollbar-color: #e5e7eb transparent;
+  scrollbar-color: #e5e7eb transparent;
 }
 
 @media (min-width: 480px) {
@@ -1536,9 +1536,9 @@ ul.social-app li a:hover svg path {
 }
 
 #sidebarRubrics .nav-menu .nav-item:nth-child(n+8) {
-  display: none;  
-} 
- 
+  display: none;
+}
+
 #sidebarRubrics .nav-menu.show-all .nav-item:nth-child(n+8) {
   display: list-item;
 }
@@ -1594,24 +1594,28 @@ ul.social-app li a:hover svg path {
   justify-content: center;
 }
 
-/*Блог*/
-
-.posts {
-  max-width: 100%;
-  width: 100%;
+.content__center {
+  max-width: 710px;
+  min-width: 0;
 }
 
 @media (min-width: 1024px) {
-  .posts {
-    max-width: 710px;
+  .content__center {
     margin-inline-end: 30px;
   }
 }
 
 @media (min-width: 1536px) {
-  .posts {
+  .content__center {
     margin-inline-end: 60px;
   }
+}
+
+/*Блог*/
+
+.posts {
+  max-width: 100%;
+  width: 100%;
 }
 
 .post {
@@ -1972,11 +1976,8 @@ ul.social-app li a:hover svg path {
 .tags__list {
   display: flex;
   flex-wrap: wrap;
-}
-
-.tags__list__item {
-  margin-inline-end: 6px;
-  margin-bottom: 8px;
+  row-gap: 8px;
+  column-gap: 6px;
 }
 
 .tags__list__item a {
@@ -1989,4 +1990,64 @@ ul.social-app li a:hover svg path {
   padding-top: 7px;
   padding-bottom: 7px;
   background-color: #F2F2F2;
+  border: 1px solid #F2F2F2;
+}
+
+.categories {
+  position: relative;
+}
+
+.categories__list {
+  padding: 2.5rem 0;
+}
+
+.categories__list__item {
+  width: fit-content;
+}
+
+.categories__list__item a {
+  font-size: 1rem;
+  padding: 8px 22px;
+}
+
+.categories__list__item--special a {
+  border-color: #ff9000;
+  box-shadow: 1px 1px 2px 0 #ff9000;
+}
+
+.swiper-button-prev-categories,
+.swiper-button-next-categories {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 16px;
+  background-color: #F2F2F2;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: .3s;
+  cursor: pointer;
+  user-select: none;
+}
+
+.swiper-button-prev-categories {
+  left: 0;
+}
+
+.swiper-button-next-categories {
+  right: 0;
+}
+
+.swiper-button-prev-categories.swiper-button-disabled,
+.swiper-button-next-categories.swiper-button-disabled {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.categories:hover .swiper-button-prev-categories,
+.categories:hover .swiper-button-next-categories {
+  opacity: 1;
+  pointer-events: unset;
 }
