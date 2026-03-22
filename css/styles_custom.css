@@ -1241,6 +1241,20 @@ ul.social-app li a:hover svg path {
   left: 1rem;
 }
 
+.header__search__close {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  inset-inline-end: 20px; 
+}
+
+@media (min-width: 1280px) {
+  .header__search__close {
+    display: none;
+  }
+}
+
 .header__nav {
   display: none;
 }
@@ -1394,7 +1408,7 @@ ul.social-app li a:hover svg path {
 /*Сайдбар*/
 @media (max-width:1280px) {
   .sidebar {
-    left: -250px;
+    left: -285px;
   }
 
   .sidebar.show {
@@ -1600,7 +1614,7 @@ ul.social-app li a:hover svg path {
 
 @media (min-width: 1280px) {
   .content {
-    margin-inline-start: 250px;
+    margin-inline-start: 285px;
   }
 }
 

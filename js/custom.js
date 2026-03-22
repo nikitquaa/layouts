@@ -53,6 +53,12 @@ jQuery(document).ready(function () {
   jQuery(".search-close").click(function () {
     jQuery(".mobile-search").removeClass("show");
   });
+  jQuery(document).mouseup(function (e) {
+    var container = jQuery(".mobile-search");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass("show");
+    }
+  });
 
   // ===== Post Swiper Slider Js ===== //
   if (jQuery(".post-slider .post-slider-wrapper").length > 0) {
@@ -191,9 +197,9 @@ jQuery(document).ready(function () {
     jQuery(this).toggleClass('following');
 
     if (jQuery(this).hasClass('following')) {
-      jQuery(this).text('Following');
+      jQuery(this).text('Вы подписаны');
     } else {
-      jQuery(this).text('Follow');
+      jQuery(this).text('Подписаться');
     }
   });
 
