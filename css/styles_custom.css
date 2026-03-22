@@ -1093,7 +1093,7 @@ ul.social-app li a:hover svg path {
 .header__left {
   display: flex;
   align-items: center;
-  max-width: 220px;
+  max-width: 250px;
   width: 100%;
 }
 
@@ -1409,7 +1409,7 @@ ul.social-app li a:hover svg path {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  max-width: 250px;
+  max-width: 285px;
   background-color: #ffffff;
   border-inline-end: 1px solid #E6E6E6;
   z-index: 10;
@@ -1485,6 +1485,8 @@ ul.social-app li a:hover svg path {
   color: rgb(100 100 100 / var(--tw-text-opacity));
 }
 
+.nav-item {}
+
 .nav-item.active>a {
   --tw-bg-opacity: 1;
   background-color: rgb(25 25 25 / var(--tw-bg-opacity));
@@ -1504,6 +1506,15 @@ ul.social-app li a:hover svg path {
 
 .nav-item.active a .chevron svg path {
   fill: #ffffff;
+}
+
+.nav-item a div>svg {
+  width: 20px;
+  height: 20px;
+} 
+
+.nav-item.active a div>svg path {
+  stroke: #ffffff;
 }
 
 .nav-item.active a div>svg path {
@@ -1939,6 +1950,7 @@ ul.social-app li a:hover svg path {
 
 .post-small__img img {
   width: 100%;
+  object-fit: cover;
 }
 
 .post-small__text {
