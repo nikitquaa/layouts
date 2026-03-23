@@ -43,6 +43,12 @@ jQuery(document).ready(function () {
 
   jQuery(".menu-toggle").click(function () {
     jQuery(".sidebar").toggleClass("show");
+  }); 
+  jQuery(document).mouseup(function (e) {
+    var container = jQuery(".sidebar");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass("show");
+    }
   });
 
   // ===== Mobile Search Toggle Js ===== //
