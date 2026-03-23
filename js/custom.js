@@ -30,14 +30,14 @@ jQuery(document).ready(function () {
 
   // ===== Topic Tabs Js ===== //
 
-  // jQuery(".topic-tabs").on("click", ".topic-tabs-link ", function (e) {
-  //   e.preventDefault();
-  //   jQuery(".topic-tabs-link").removeClass("active");
-  //   jQuery(".topic-content").removeClass("show");
-  //   jQuery(this).addClass("active");
-  //   jQuery(".topic-content").addClass("hidden");
-  //   jQuery(jQuery(this).attr("href")).addClass("show").removeClass("hidden");
-  // });
+  jQuery(".topic-tabs").on("click", ".topic-tabs-link ", function (e) {
+    e.preventDefault();
+    jQuery(".topic-tabs-link").removeClass("active");
+    jQuery(".topic-content").removeClass("show");
+    jQuery(this).addClass("active");
+    jQuery(".topic-content").addClass("hidden");
+    jQuery(jQuery(this).attr("href")).addClass("show").removeClass("hidden");
+  });
 
   // ===== Sidebar Toggle Js ===== //
 
@@ -213,17 +213,6 @@ jQuery(document).ready(function () {
         nextEl: ".swiper-button-next-categories",
         prevEl: ".swiper-button-prev-categories",
       },
-      breakpoints: {
-        768: {
-          navigation: {
-            nextEl: ".swiper-button-next-categories",
-            prevEl: ".swiper-button-prev-categories",
-          },
-        },
-        0: {
-          navigation: false,
-        }
-      }
     });
   });
 
