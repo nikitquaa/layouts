@@ -2144,6 +2144,8 @@ ul.social-app li a:hover svg path {
   pointer-events: unset;
 }
 
+/*Канал*/
+
 .channel {
   padding-bottom: 0.5rem;
 }
