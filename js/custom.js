@@ -43,7 +43,7 @@ jQuery(document).ready(function () {
 
   jQuery(".menu-toggle").click(function () {
     jQuery(".sidebar").toggleClass("show");
-  }); 
+  });
   jQuery(document).mouseup(function (e) {
     var container = jQuery(".sidebar");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -218,6 +218,17 @@ jQuery(document).ready(function () {
       navigation: {
         nextEl: ".swiper-button-next-categories",
         prevEl: ".swiper-button-prev-categories",
+      },
+    });
+  });
+
+  jQuery(document).ready(function () {
+    var swiper = new Swiper(".flash .swiper", {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next-flash",
+        prevEl: ".swiper-button-prev-flash",
       },
     });
   });
