@@ -2515,6 +2515,20 @@ ul.social-app li a:hover svg path {
   }
 }
 
+.channel__bar {
+  
+}
+
+.channel__bar__title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+.channel__bar__descr {
+  color: #646464;
+}
+
 .channel__tabs {
   display: flex;
   align-items: center;
