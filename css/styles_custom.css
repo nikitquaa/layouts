@@ -2515,9 +2515,7 @@ ul.social-app li a:hover svg path {
   }
 }
 
-.channel__bar {
-  
-}
+.channel__bar {}
 
 .channel__bar__title {
   font-size: 2rem;
@@ -2657,4 +2655,83 @@ ul.social-app li a:hover svg path {
 .post__header--detail {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.post__page p {
+  font-size: 0.875rem;
+  color: #646464;
+  margin-bottom: 12px;
+}
+
+.post__page h3,
+.post__page h4 {
+  color: #191919;
+  font-weight: 600;
+  font-size: 1rem;
+  padding-bottom: 6px;
+}
+
+@media (min-width: 480px) {
+
+  .post__page h3,
+  .post__page h4 {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 640px) {
+
+  .post__page h3,
+  .post__page h4 {
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+  }
+}
+
+.post__page h2 {
+  color: #191919;
+  font-weight: 600;
+  font-size: 1.25rem;
+  padding-bottom: 6px;
+}
+
+@media (min-width: 480px) {
+  .post__page h2 {
+    font-size: 1.375rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .post__page h2 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+  }
+}
+
+@media (min-width: 480px) {
+  .post__page p {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 640px) {
+  .post__page p {
+    font-size: 1rem;
+  }
+}
+
+.post__page blockquote {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.post__page blockquote::before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  border-radius: 4px;
+  background-color: #008000;
+  left: 0;
+  top: 0;
 }
