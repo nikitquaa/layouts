@@ -2347,7 +2347,7 @@ ul.social-app li a:hover svg path {
 .channels-small__item__posts {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
+  padding-left: 44px;
 }
 
 .channels-small__item__posts>a {
